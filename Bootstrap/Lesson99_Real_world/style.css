@@ -1,0 +1,220 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/** Nav Bar */
+.custom_nav {
+    font-size: small;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.3);
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,32,25,0.8018557764902836) 9%, rgba(1,23,13,0.6898109585631127) 22%, rgba(0,21,21,0.5329482134650736) 34%, rgba(27,57,103,0.7262255243894433) 48%, rgba(33,42,117,0.846673703661152) 61%, rgba(0,0,5,1) 72%, rgba(36,34,50,0.8858893899356618) 81%, rgba(42,59,113,0.7010154403558299) 91%, rgba(0,0,0,0.7710434515603116) 95%, rgba(49,60,62,1) 100%);
+}
+
+.custom_nav ul.dropdown-menu {
+    font-size: small;
+}
+
+.custom_divider {
+    height: 5px;
+    background: rgba(255,145,0);
+    background: linear-gradient(90deg, rgba(255,145,0,1) 0%, rgba(9,9,121,1) 15%, rgba(153,7,128,1) 39%, rgba(5,107,186,1) 59%, rgba(26,221,3,1) 79%, rgba(0,212,255,1) 100%);
+}
+/*Nav Bar**/
+
+/**Banner*/
+.main_banner {
+    padding: 100px;
+    padding-bottom: 10px;
+    background-image: url("bg_img.png");
+    background-size: cover;
+    color: white;
+}
+
+.main_banner_content {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+/**Banner*/
+
+/**Features*/
+.features {
+    padding: 25px 0px;
+    background-color: whitesmoke;
+}
+
+.feature_folder {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.feature_folder h3{
+    font-size: 1.2em;
+}
+
+.feature_folder p{
+    font-size: 14px;
+}
+/**Features*/
+
+/**Online COurses Class Room Training**/
+.just {
+    justify-content: center;
+}
+.online_courses, .classromm_training{   
+    padding: 25px 0px;
+    font-size: 1.2em;
+    border: solid;
+}
+
+.online_courses_text, .classroom_course_widget, .review_courses_text {
+    text-align: center;
+    font-size: 14px;
+}
+.online_course_card{
+    text-align: center;
+    margin: 15px;
+    transition: 0.4s;
+}
+.online_course_card:hover {
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+.online_course_card .card-title, .classroom_course_widget h2{
+    font-size: 1.3em;
+    line-height: 25px;
+}
+.online_course_card p, .classroom_course_widget p{
+    font-size: 14px;
+    text-align: justify;
+}
+.signup_form_sidebar {
+    font-size: 1.4em;
+}
+.card-text {
+    font-size: 14px;
+}
+.card-body {
+    color: whitesmoke;    
+}
+.list-group-item {
+    color: whitesmoke;
+    font-weight: bold;
+} 
+.course_list_item {
+    color: black;
+}
+.course_list_item h5{
+    font-weight: bold;
+    font-size: large;
+}
+.course_list_item p{
+    color: black;
+    font-size: small;
+}
+/**Online COurses  Class Room Training **/
+
+/**REVIEW**/
+.card-body {
+    color: black;
+}
+.review_courses_text h2{
+    font-weight: bold;
+    text-align: center;
+}
+.review_courses_text p {
+    text-align: justify;
+}
+#review_slider_content li .card{
+    text-align: center;
+}
+#review_slider_content li .card img{
+    width: 50px;
+    margin-bottom: 15px;
+}
+#review_slider_content li .card .card-title{
+    font-size: 18px;
+    font-weight: bold;
+}
+#review_slider_content li .card  .star {
+    color:grey;
+    font-size: 14px;
+}
+#review_slider_content li .card .card-text{
+    font-size: 18px;
+}
+.card-body:hover{
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+/**REVIEW**/
+
+/**Footer**/
+.main_footer {
+    background-color: #292929;
+    color: whitesmoke;
+    padding: 35px 0px;
+}
+aside .footer_widget {
+    margin-bottom: 25px;
+}
+aside.footer_widget h5{
+    font-size: 16px;
+}
+.footer_widget ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+.footer_widget li{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.footer_widget li a{
+    text-decoration: none;
+    color: white;
+}
+address h2 {
+    font-size: 20px;
+}
+address h2 {
+    font-size: 14px;
+}
+/**Footer**/
+
+/**Copyright**/
+.copy {
+    padding: 15px 0px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 0px;
+}
+/**Copyright**/
+
+/**Page Content**/
+.page_content {
+    padding-top: 35px;
+    padding-bottom: none;
+}
+/**Page Content**/
+
+/**COntent_banner**/
+.google_map {
+    margin: 0px;
+    padding-top: 35px;
+    padding-bottom: none;
+}
+.content_banner {
+    background: rgb(240,239,223);
+    background: linear-gradient(90deg, rgba(240,239,223,1) 0%, rgba(167,219,207,0.8018557764902836) 9%, rgba(1,23,13,0.6898109585631127) 22%, rgba(0,21,21,0.5329482134650736) 34%, rgba(27,57,103,0.7262255243894433) 48%, rgba(33,42,117,0.846673703661152) 61%, rgba(0,0,5,1) 72%, rgba(36,34,50,0.8858893899356618) 81%, rgba(224,224,178,0.7010154403558299) 91%, rgba(212,230,204,0.7710434515603116) 95%, rgba(181,226,180,0.9054972330729166) 100%);
+    margin: none;
+    padding: none;
+}
+.divider{
+    margin: 5px;
+    padding: 10px;
+}
+/**COntent_banner**/

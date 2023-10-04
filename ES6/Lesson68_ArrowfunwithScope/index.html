@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArrowFunction With Scope</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <script type="text/babel">
+
+        var person = {
+            first: "Sahaj",
+            action: ["Bike", "Swim", "Dance"],
+            printAction: function() {
+                var _this = this;  
+                this.action.forEach(function(action) {
+                    var str = _this.first + 'likes' + action;  //since this cannot access double finction so
+                    console.log(str);
+                }
+                );
+            }
+        }
+        person.printAction();
+     
+
+
+    //ANOTHER WAY TO DO SUCH IS
+    var person = {
+            first: "Sahaj",
+            action: ["Bike", "Swim", "Dance"],
+            printAction: function() {
+                this.action.forEach(function(action) {
+                    var str = this.first + 'likes' + action;  //since this cannot access double finction so
+                    console.log(str);
+                }.bind(this));
+            }
+        }
+
+        person.printAction();
+
+    //USING ARROW
+    var person = {
+            first: "Sahaj",
+            action: ["Bike", "Swim", "Dance"],
+            printAction: function() {
+                this.action.forEach( (eachAction) => {
+                    var str = this.first + 'likes' + eachAction;  
+                    console.log(str);
+                }
+                );
+            }
+        } 
+        person.printAction();
+    </script>
+</body>
+</html>

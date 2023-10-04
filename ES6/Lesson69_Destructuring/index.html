@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Destructuring</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <script type="text/babel">
+        var [first,, third] = ["KTM", "PKR", "DHRN"];
+        console.log(first, third);
+
+        console.log("WITHOUT DESTRUCUTRING")
+        var sandwish = {
+            title: "Cheese Sanwich",
+            price: 40,
+            description: "Cheese sandwich in KTM",
+            ingredients: ["Bread","Butter","Chesee"]
+        };
+        console.log(sandwish.title);
+        console.log(sandwish.price);
+
+        console.log("WITH DESTRUCUTRING")
+        var {title, price} = {
+            title: "Cheese Sanwich",
+            price: 40,
+            description: "Cheese sandwich in KTM",
+            ingredients: ["Bread","Butter","Chesee"]
+        };
+        console.log(title);
+        console.log(price);
+
+        var vacation = {
+            destination: "PKR",
+            traveller: 2,
+            activity: "Beach",
+            cost: 4000
+        };
+        function vacDes({destination, activity}) {
+            return (`Lets go to ${destination} and do ${activity}`)
+        }
+        console.log(vacDes(vacation));
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Literals</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <script type="text/babel">
+        var sound = {
+            alarm: function( times ) {
+            console.log(Array(times+1).join("BEEP")); //Araay indexing starts with 0
+        },
+        ringTone: function( times ) {
+            console.log(Array(times+1).join("songs"));
+                 } 
+        }
+        console.log(sound.alarm(3));
+        console.log(sound.ringTone(4));
+        //ALTERNATE IT AS
+        console.log("Alternate ways");
+        var sounds = {
+            alarm(times) {
+                console.log("Beep".repeat(times));
+            },
+        ringTone(times) {
+                console.log("Songs".repeat(times));
+            }
+        }
+        console.log(sounds.alarm(3));
+        console.log(sounds.ringTone(4));
+        
+    </script>
+</body>
+</html>

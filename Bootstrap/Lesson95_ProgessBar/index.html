@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>PROGESS BARS</title>
+  </head>
+  <body>
+    <div class="container"> 
+        <div class="row mt-5 justify-content-center">
+          <div class="col-4 align-items-center">
+            <div class="progress mb-2">
+              <div 
+                class="progress-bar" 
+                role="progressbar" 
+                style="width: 75%" 
+                aria-valuenow="75" 
+                aria-valuemin="0" 
+                aria-valuemax="100">
+                75
+              </div>
+            </div> 
+            <div class="progress mb-2">
+              <div 
+                class="progress-bar" 
+                role="progressbar" 
+                style="width: 25%" 
+                aria-valuenow="25" 
+                aria-valuemin="0" 
+                aria-valuemax="100">
+                25
+              </div>
+            </div> 
+          </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script>
+       var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+          return new bootstrap.Popover(popoverTriggerEl)
+        })    
+    </script>
+  </body>
+</html>

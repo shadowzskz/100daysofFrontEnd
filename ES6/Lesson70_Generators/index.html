@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator </title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <script type="text/babel">
+        function* movies() {
+            yield "Lights";
+            yield "Camera";
+            yield "Action";
+        }
+        var action = movies();
+        console.log(action.next());
+        console.log(action.next());
+        console.log(action.next());
+
+        function* eachItem(arr) {
+            for (var i=0; i<=arr.length; i++) {
+                yield arr[i];
+            }
+        } 
+        eachItem([1,2,3,4,5,5]);
+        var myNumbers = eachItem([1,2,3,4,5,5]);
+        var myNum = setInterval(function() {
+            var myNumber = myNumbers.next();
+            if (myNumber.done) {
+                clearInterval(myNum);
+                console.log("These are my numbers")
+            } else {
+                console.log(myNumber.value);
+            }
+        }, 500);
+    </script>
+</body>
+</html>

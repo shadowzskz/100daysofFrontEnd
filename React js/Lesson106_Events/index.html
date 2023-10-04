@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Events</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <style>
+        .note {
+            width: 200px;
+            height: 150px;
+            background-color: teal;
+            padding: 15px;
+            border: 1px solid orange;
+            box-shadow: 2px 6px 12px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="react_container">
+        
+    </div>
+<script type="text/babel">
+
+class Note extends React.Component {
+
+    editing() {
+        alert("Edit");
+    }
+
+    deleteing() {
+        alert("Delete");
+    }
+
+    render() {
+        return (
+            <div ClassName="note">
+                <p>{this.props.children}</p>
+                <span>
+                    <button onClick = { this.editing }>Edit</button>
+                    <button onClick = { this.deleteing }>X</button>
+                </span>
+            </div>
+        )
+    }
+}
+ReactDOM.render(<Note> Hello Worlds </Note>, 
+    document.getElementById('react_container')
+    );
+</script>
+</body>
+</html>

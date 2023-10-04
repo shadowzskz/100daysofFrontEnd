@@ -1,0 +1,71 @@
+.box {
+    max-width: 1000px;
+    height: auto;
+    margin: 10px;
+    padding: 5px;
+    animation-name: runMe;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@media(max-width:500px) {
+    .box {
+        background-color: yellowgreen;
+    }
+}
+
+
+@keyframes runMe {
+    from{
+        background-color: black;
+        color: white;
+    }
+    to {
+        background-color: white;
+        color: black;
+    }
+}
+
+.box2 {
+    max-width: 100px;
+    height: 100px;
+    margin: 10px;
+    padding: 5px;
+    background-color: red;
+    position: absolute;
+    animation-name: runMe2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    top: 100px;
+}
+@keyframes runMe2 {
+    0% {
+        left: 10px;
+        top: 100px;
+        width: 89px;
+        height: 89px;
+    }
+    25% {
+        left: 210px;
+        top: 100px;
+        width: 80px;
+        height: 80px;
+        transform: rotate(90deg);
+        background-color: palegreen;
+    }
+    50% {
+        left: 210px;
+        top: 200px;
+    }
+    75% {
+        left: 10px;
+        top: 200px;
+        width: 50px;
+        height: 50px;
+        transform: rotate(90deg);
+        background-color: palegoldenrod;
+    }
+    100% {
+        left: 10px;
+        top: 100px;
+    }
+}

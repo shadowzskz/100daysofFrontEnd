@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React States(Addition)</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    
+</head>
+<body>
+    
+    <div id="react_container">
+        
+    </div>
+<script type="text/babel">
+
+    class Note extends React.Component {
+
+        constructor(props){
+            super(props);
+            this.state = {
+                editing: false
+            }
+        }
+
+        edit = () => {
+            this.setState({ editing: true });
+        }
+
+        save = () => {
+            this.setState({ editing: false });
+        }
+
+        delete() {
+            alert("Delete");
+        }
+
+        renderForm = () => {
+            return(
+               <div class="note">
+                    <textarea></textarea>
+                    <button onClick = {this.save}>save</button>
+                </div>
+            )
+        }
+
+        renderDisplay = () => {
+            return (
+                <div ClassName="note">
+                    <p>{this.props.children}</p>
+                    <span>
+                        <button onClick = { this.edit }>Edit</button>
+                        <button onClick = { this.delete }>X</button>
+                    </span>
+                </div>
+                )
+            }
+        
+        render() {
+            if (this.state.editing) {
+                return this.renderForm();
+            }
+            else {
+                return this.renderDisplay();
+            }
+    }
+}
+
+    ReactDOM.render(<Note />, 
+        document.getElementById('react_container')
+        );
+</script>
+   
+</body>
+</html>

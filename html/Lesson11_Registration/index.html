@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Forms</title>
+</head>
+<body>
+    <form method="POST">
+        <table>
+            <tr>
+                <td>Username</td>
+                <td><input type="text" name="u_name" required></td>
+            </tr>
+            <tr>
+                <td>eMAIL</td>
+                <td><input type="email" name="u_email" required></td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td><input type="number" name="u_phone" required></td>
+            </tr>
+            <tr>
+                <td>DOB</td>
+                <td><input type="date" name="u_date" required></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td><input type="radio" name="gemder" value="male">Male</td>
+                <td><input type="radio" name="gemder" value="female">Female</td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td>
+                    <select name="u_country">
+                        <option value="Nepal">Nepal</option>
+                        <option value="China">China</option>
+                        <option value="USA">USA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="u_pass" required></td>
+            </tr>
+            <tr>
+                <td>Conform Password</td>
+                <td><input type="password" name="u_pass" required></td>
+            </tr>
+            <tr>
+                <td></td>
+            <td><input type="submit" name="u_login" value="Register"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

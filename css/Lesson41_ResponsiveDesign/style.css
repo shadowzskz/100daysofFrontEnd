@@ -1,0 +1,13 @@
+.box {
+    max-width: 1000px;
+    height: auto;
+    margin: 10px;
+    padding: 5px;
+    background-color: chocolate;
+    color: wheat;
+}
+@media(max-width:500px) {
+    .box {
+        background-color: yellowgreen;
+    }
+}

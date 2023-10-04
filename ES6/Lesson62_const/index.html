@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONST</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <script type="text/babel">
+        const birthYear = 2020;
+        //var birthYear = 2021; ///CONST CANNOT BE CHANGE
+        console.log(birthYear);
+
+        function check(deg) {
+            const frezTem = 32;
+            if (frezTem<=deg) {
+                return deg + " above freezing";
+            }else {
+                return deg + " below freezing";
+            }
+        }
+        console.log(check(34));
+        console.log(check(2));
+        console.log(check(-2));
+    </script>
+</body>
+</html>

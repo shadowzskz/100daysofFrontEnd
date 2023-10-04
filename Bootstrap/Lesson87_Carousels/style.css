@@ -1,0 +1,25 @@
+.myForm {
+    padding:15px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+.submit {
+    width:77px;
+    height: 40px;
+    margin: auto;
+    float: left;
+    margin-left: 10px;
+    padding: 2px 2px;
+}
+.reg {
+    width: 85px;
+    height: 40px;
+    margin: auto;
+    float: right;
+    padding: 2px 2px;
+}
+.btn_center {
+    width:77px;
+    height: 40px;
+    margin: auto;
+    align-content: center;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperals</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <script type="text/babel">
+     
+     function printName(fname) {
+         console.log(`WELCOME  + ${fname}`);
+     }
+     printName('Sahaj');
+
+    function sendEmail(fname, price) {
+        var shipping = 40;
+        console.log(
+            `Hi ${fname}, Thankyou for buying from us.
+                            Totals is: $${price}
+                            Shipping: $${shipping}
+                            Grand Total: $${price + shipping};
+                                `
+        );
+    }
+    sendEmail('Sahaj', 20);
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Props</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+</head>
+<body>
+    <div id="react_container">
+        
+    </div>
+<script type="text/babel">
+class Mycompo extends React.Component {
+    render () {
+       return (
+           <div>
+                <h1>Hello {this.props.text}</h1>
+                <p>{this.props.children}</p>
+           </div>
+       )
+   }
+}
+
+ReactDOM.render(
+    <div>
+        <Mycompo text="Sahaj"> Message1 </Mycompo>
+        <Mycompo text="Kai" />
+        <Mycompo text="Shakya"> Message2 </Mycompo>
+    </div>, 
+    document.getElementById('react_container')
+    );
+</script>
+</body>
+</html>

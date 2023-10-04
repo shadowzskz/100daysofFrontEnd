@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Refrence</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <style>
+        .note {
+            width: 150px;
+            height: 100px;
+            background-color: orange;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .note textarea {
+            width: 150px;
+            height: 100px;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .note button {
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="react_container">
+        
+    </div>
+<script type="text/babel">
+
+    class Note extends React.Component {
+
+        constructor(props){
+            super(props);
+            this.state = {
+                editing: false
+            }
+        }
+
+        edit = () => {
+            this.setState({ editing: true });
+        }
+
+        save = () => {
+            var val = this.refs.newText.value;
+            alert("value is stored as " + val)
+            this.setState({ editing: false });
+        }
+
+        delete() {
+            alert("Delete");
+        } 
+
+        renderForm = () => {
+            return(
+               <div className =" note">
+                    <textarea ref="newText" required></textarea>
+                    <button onClick = {this.save}>save</button>
+                </div>
+            )
+        }
+
+        renderDisplay = () => {
+            return (
+                <div className = "note">
+                    <p>{this.props.children}</p>
+                    <span>
+                        <button onClick = { this.edit }>Edit</button>
+                        <button onClick = { this.delete }>X</button>
+                    </span>
+                </div>
+                )
+            }
+        
+        render() {
+            if (this.state.editing) {
+                return this.renderForm();
+            }
+            else {
+                return this.renderDisplay();
+            }
+    }
+}
+
+    ReactDOM.render(<Note />, 
+        document.getElementById('react_container')
+        );
+</script>
+   
+</body>
+</html>

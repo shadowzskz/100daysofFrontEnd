@@ -1,0 +1,11 @@
+body {
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+
+.container {
+    width: 1000px;
+    height: auto;
+    background-color: white;
+    margin: auto;
+}
